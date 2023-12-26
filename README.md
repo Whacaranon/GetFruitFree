@@ -194,7 +194,7 @@ end
 
     function CheckQuest() 
         MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-        if World1 then
+        
             if MyLevel == 1 or MyLevel <= 9 then
                 Mon = "Bandit"
                 LevelQuest = 1
@@ -230,7 +230,6 @@ end
                 NameMon = "Brute"
                 PUK = CFrame.new(-1144.44861, 90.5594559, 4307.25928, -0.998438537, 0, 0.0558618344, 0, 1, 0, -0.0558618344, 0, -0.998438537)
                 CFrameQuest = CFrame.new(-1141.07483, 4.10001802, 3831.5498, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627)
-
 end
         end
     end
