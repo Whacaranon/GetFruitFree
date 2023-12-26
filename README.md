@@ -8,7 +8,18 @@
             end
         end
     end
- 
+
+function UnEquipWeapon(Weapon)
+        if game.Players.LocalPlayer.Character:FindFirstChild(Weapon) then
+            _G.NotAutoEquip = true
+            wait(.5)
+            game.Players.LocalPlayer.Character:FindFirstChild(Weapon).Parent = game.Players.LocalPlayer.Backpack
+            wait(.1)
+            _G.NotAutoEquip = false
+        end
+    end
+
+  _G.SelectWeapon = "Combat"
     local plr = game.Players.LocalPlayer
 
     local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
