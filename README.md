@@ -274,7 +274,7 @@ end
                                     if v.Name == Mon then
                                         if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
                                             repeat task.wait()
-                                              Equip(_G.SelectWeapon)
+                                              Equip(WeaponName)
                                                 AutoHaki()                                            
                                                 PosMon = v.HumanoidRootPart.CFrame
                                                 topos(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
