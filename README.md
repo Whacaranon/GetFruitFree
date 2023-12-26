@@ -1,4 +1,4 @@
-    
+    _G.SelectWeapon = "Combat"
     function EquipWeapon(ToolSe)
         if not _G.NotAutoEquip then
             if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
@@ -85,6 +85,8 @@
     end
     end)
     
+_G.FastAttack = true
+
        function topos(Pos)
         Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
         if game.Players.LocalPlayer.Character.Humanoid.Sit == true then game.Players.LocalPlayer.Character.Humanoid.Sit = false end
@@ -245,7 +247,7 @@ end
                                     if v.Name == Mon then
                                         if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, NameMon) then
                                             repeat task.wait()
-                                                EquipWeapon("Combat")
+                                                EquipWeapon(_G.SelectWeapon)
                                                 AutoHaki()                                            
                                                 PosMon = v.HumanoidRootPart.CFrame
                                                 topos(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
