@@ -155,10 +155,7 @@
     end
     
     _G.BringMon = true
-    Main:AddToggleRight("BringMon",_G.BringMon,function(value)
-        _G.BringMon = value
-    end)
-    
+   
      spawn(function()
         while task.wait() do
             pcall(function()
