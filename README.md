@@ -170,7 +170,8 @@
                                 v.Humanoid.Animator:Destroy()
                             end
                             sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius",math.huge)
-                    end
+end                   
+ end
                 end
             end)
         end
