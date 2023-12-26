@@ -313,6 +313,7 @@ spawn(function()
         end
     end)
 
+
 AutoGet = true
 _G.AutoFarm = true
 spawn(function()
@@ -329,6 +330,7 @@ spawn(function()
         game:GetService("TeleportService"):TeleportToPlaceInstance(7449423635, _G.JobId)
  if game.JobId == _G.JobId then
            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
+end
 end
 end
 end
