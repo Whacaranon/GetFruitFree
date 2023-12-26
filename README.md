@@ -326,13 +326,14 @@ spawn(function()
       elseif game:GetService("Players")["LocalPlayer"].Data.Beli.Value >= 32350 then
          _G.AutoChest = false
        topos(CFrame.new(979.79895019531, 16.516613006592, 1429.0466308594))
-         if (Vector3.new(-16208.0654, 10.4592094, 404.354523, -0.0460886136, 1.71953063e-09, -0.998937368, -6.43779785e-08, 1, 4.69160799e-09, 0.998937368, 6.45257998e-08, -0.0460886136) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
+         if (Vector3.new(979.79895019531, 16.516613006592, 1429.0466308594) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
         game:GetService("TeleportService"):TeleportToPlaceInstance(7449423635, _G.JobId)
  if game.JobId == _G.JobId then
            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
 end
 end
 end
+
 end
 end)
 end
