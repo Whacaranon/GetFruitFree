@@ -4704,7 +4704,7 @@ Main:AddToggleLeft("getfruit",_G.AutoFarm,function(value)
             pcall(function()
                 if _G.Auto_Melee then
                     if game:GetService("Players")["LocalPlayer"].Data.Points.Value ~= 0 then
-                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AddPoint","Melee",1)
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AddPoint","Melee","1")
                     end
                 end
             end)
