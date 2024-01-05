@@ -4675,7 +4675,7 @@ elseif MyLevel >= 2525 then
     
             Main:AddSeperatorLeft("Farm")
 
-
+_G.AutoFarm = true
 Main:AddToggleLeft("Auto Farm",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
