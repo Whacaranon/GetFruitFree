@@ -4684,20 +4684,33 @@ elseif MyLevel >= 2525 then
     Date = os.date("%d".." ".."%B".." ".."%Y")
     Main:AddLabelLeft("Day : "..Date)
    Main:AddLineLeft("")
-FM = Main:AddLabelLeft("")
+
         
            Main:AddSeperatorLeft("Job Id")
 Main:AddLabelLeft(game.JobId)
  Main:AddButtonLeft("Copy Job id",function()
     setclipboard(tostring(game.JobId))
     end)
-
+Main:AddSeperatorLeft("GetFruitFree🍊")
 _G.SelectWeapon = "Combat"
+_G.AutoFarm = true
 Main:AddToggleLeft("getfruit",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
     end)
-    
+    _G.Auto_Melee = true
+ spawn(function()
+        while wait() do
+            pcall(function()
+                if _G.Auto_Melee then
+                    if game:GetService("Players")["LocalPlayer"].Data.Points.Value ~= 0 then
+                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AddPoint","Melee",1)
+                    end
+                end
+            end)
+        end
+    end)
+
     spawn(function()
         while wait() do
             if _G.AutoFarm then
