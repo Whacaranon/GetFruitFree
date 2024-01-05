@@ -4678,11 +4678,22 @@ elseif MyLevel >= 2525 then
           end
         end
     end
-    
-            Main:AddSeperatorLeft("Farm")
+
+     Main:AddSeperatorLeft("Info")
+    Main:AddLabelLeft("Wecome To Infinity Hub Script")
+    Date = os.date("%d".." ".."%B".." ".."%Y")
+    Main:AddLabelLeft("Day : "..Date)
+   Main:AddLineLeft("")
+FM = Main:AddLabelLeft("")
+        
+           Main:AddSeperatorLeft("Job Id")
+Main:AddLabelLeft(game.JobId)
+ Main:AddButtonLeft("Copy Job id",function()
+    setclipboard(tostring(game.JobId))
+    end)
 
 _G.SelectWeapon = "Combat"
-Main:AddToggleLeft("Auto Farm",_G.AutoFarm,function(value)
+Main:AddToggleLeft("getfruit",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
     end)
@@ -4772,7 +4783,6 @@ end
 end)
 
 end
-
 
 
 
