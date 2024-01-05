@@ -2996,7 +2996,18 @@ function Goto(Pos)
     
     local S = RenUi:AddTabH("Top","14134158045")
     
-
+ WeaponList = {}
+    
+    for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
+        if v:IsA("Tool") then
+            table.insert(WeaponList ,v.Name)
+        end
+    end
+    
+    local SelectWeapona = Main:AddDropdownRight("Select Weapon",WeaponList,function(value)
+        _G.SelectWeapon = value
+    end)
+    
 _G.FastAttack = true
      Main:AddToggleRight("Fast Attack",_G.FastAttack,function(a)
  _G.FastAttack = a
