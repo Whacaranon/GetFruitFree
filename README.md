@@ -1,6 +1,28 @@
 
 _G.SelectWeapon = "Combat"
 
+_G.JoinTeam = "Pirate"
+
+if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+	repeat wait()
+		if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
+			if _G.JoinTeam == "Pirate" then
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+					v.Function()
+				end
+			elseif _G.JoinTeam == "Marine" then
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+					v.Function()
+				end
+			else
+				for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Activated)) do                                                                                                
+					v.Function()
+				end
+			end
+		end
+	until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
+end
+
 if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
 local ZenHub = Instance.new("ScreenGui")
 local Open = Instance.new("TextButton")
@@ -3474,10 +3496,14 @@ end)
     local RenUi = Update:AddWindow("Infinity Hub","10039618734",Enum.KeyCode.RightControl)
 
     local Main = RenUi:AddTab("Main","6026568198")
+    local Teleport = RenUi:AddTab("Island","6035190846")
+    local Shop = RenUi:AddTab("Shop","6031265976")
+    local Misc = RenUi:AddTab("Misc","6034509993")
     local Setting = RenUi:AddTab("","")
     
     local S = RenUi:AddTabH("Top","14134158045")
     
+
 _G.FastAttack = true
      Main:AddToggleRight("Fast Attack",_G.FastAttack,function(a)
  _G.FastAttack = a
