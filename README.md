@@ -1,5 +1,4 @@
 
-_G.SelectWeapon = "Combat"
 
 _G.JoinTeam = "Pirate"
 
@@ -3638,7 +3637,7 @@ _G.AutoFarm = false
 end
 end)
 
-
+end
 
 
 
