@@ -1875,18 +1875,7 @@ elseif MyLevel >= 2525 then
         end
     end
 
-     Main:AddSeperatorLeft("Info")
-    Main:AddLabelLeft("Wecome To Infinity Hub Script")
-    Date = os.date("%d".." ".."%B".." ".."%Y")
-    Main:AddLabelLeft("Day : "..Date)
-   Main:AddLineLeft("")
-FM = Main:AddLabelLeft("")
-        
-           Main:AddSeperatorLeft("Job Id")
-Main:AddLabelLeft(game.JobId)
- Main:AddButtonLeft("Copy Job id",function()
-    setclipboard(tostring(game.JobId))
-    end)
+
 _G.Auto_Melee = true
 spawn(function()
         while wait() do
