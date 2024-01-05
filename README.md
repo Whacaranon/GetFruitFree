@@ -1,5 +1,5 @@
 _G.JoinTeam = "Pirate"
-
+_G.SelectWeapon = "Combat"
 if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
 	repeat wait()
 		if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
@@ -4681,7 +4681,7 @@ elseif MyLevel >= 2525 then
     
             Main:AddSeperatorLeft("Farm")
 
-_G.SelectWeapon = "Combat"
+
 Main:AddToggleLeft("Auto Farm",_G.AutoFarm,function(value)
         _G.AutoFarm = value
         StopTween(_G.AutoFarm)
