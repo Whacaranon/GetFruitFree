@@ -3474,20 +3474,7 @@ if syn or not syn then
 	end)
 end)
     
-    spawn(function()
-        pcall(function()
-            while wait() do
-                for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
-                    if v:IsA("Tool") then
-                        if v:FindFirstChild("RemoteFunctionShoot") then 
-                            SelectWeaponGun = v.Name
-                        end
-                    end
-                end
-            end
-        end)
-    end)
-    
+   
     
 
 
